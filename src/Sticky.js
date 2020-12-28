@@ -54,6 +54,9 @@ export default class Sticky extends Component {
     distanceFromBottom,
     eventSource
   }) => {
+    if(!this.content) {
+      return;
+    }
     const parent = this.context.getParent();
 
     let preventingStickyStateChanges = false;
